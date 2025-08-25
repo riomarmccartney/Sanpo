@@ -9,13 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        CompassDotsView() // <- this is the actual compass
+            .ignoresSafeArea()
+            .ignoresSafeArea(.all, edges: .bottom)
+            .statusBarHidden()
+            .persistentSystemOverlays(.hidden)
     }
 }
 
